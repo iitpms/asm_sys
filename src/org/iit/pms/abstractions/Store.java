@@ -1,9 +1,13 @@
 package org.iit.pms.abstractions;
 
-public abstract class Store {
-	public String Name;
-	public String Country;
-	public String Address;
-	public boolean isGivingDiscount;
-	public Animal[] animals;
+import java.util.ArrayList;
+
+public class Store {
+	private String Name;
+	private String Country;
+	private String Address;
+	private boolean isGivingDiscount;
+	private double discount;
+	private ArrayList<Animal> animalList;
+
 }
