@@ -19,4 +19,20 @@ public class Client implements Subscriber {
 						+ " valued client.You are getting German Shepherd at a price of "
 						+ discountPrice);
 	}
+	
+	public void receiveMailNotification(double discountPrice){
+		System.out.println("Mail Notification :" + discountPrice);
+	}
+	
+	public void receiveEmailNotification(double discountPrice){
+		System.out.println("Email Notification :" + discountPrice);
+	}
+	
+	public void receiveWebNotification(double discountPrice){
+		System.out.println("Web Notification :" + discountPrice);
+	}
+	
+	public void receiveSMSNotification(double discountPrice){
+		System.out.println("SMS Notification :" + discountPrice);
+	}
 }
