@@ -8,14 +8,12 @@ import org.iit.pms.abstractions.Subscriber;
 public class ExecuteSimulation {
 
 	public static void main(String[] args) {
-		PetStore store = new PetStore();
+		PetStore store = new PetStore("Vuter Goli", "Forid Animal Store");
 		Subscriber subscriber1 = new Client("Amit");
 		Subscriber subscriber2 = new Client("Forhad");
 		store.subscribe(subscriber1);
 		store.unSubscribe(subscriber2);
 
-		store.setAddress("Vuter Goli");
-		store.setName(StoreName.HOICOI);
 		store.setDiscount(12.12);
 		store.setDiscount(12.12);
 

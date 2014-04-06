@@ -12,6 +12,8 @@ public class AnimalBuilder {
 	public boolean isSick;
 	public boolean isDiscountApplicable;
 	
+	
+	
 	public AnimalBuilder(String name, int age, AnimalType type, float price, boolean isAvailable, boolean isSick, boolean isDiscountApplicable){
 		this.name = name;
 		this.age = age;
