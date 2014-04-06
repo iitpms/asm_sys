@@ -4,20 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PetStore implements Observable {
-	private String name;
+	private StoreName name;
 	private String address;
 	private double discount;
+	private List<Animal> animals;
 	private ArrayList<Subscriber> subscriberList;
 
 	public PetStore() {
 		subscriberList = new ArrayList<>();
+		animals = new ArrayList<>();
 	}
 
-	public String getName() {
+	public StoreName getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(StoreName name) {
 		this.name = name;
 	}
 
@@ -36,7 +38,18 @@ public class PetStore implements Observable {
 	public void setDiscount(double discount) {
 		this.discount = discount;
 		notifySubscribers(subscriberList);
-
+	}
+	
+	public void addAnimal(Animal animal) {
+		this.animals.add(animal);
+	}
+	
+	public Animal search(String name) throws NullPointerException {
+		for(Animal animal : animals) {
+			if(animal.name.equals(name))
+				return animal;
+		}
+		return null;
 	}
 
 	@Override
