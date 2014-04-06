@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PetStore implements Observable {
-	private String name;
+	private StoreName name;
 	private String address;
 	private double discount;
 	private ArrayList<Subscriber> subscriberList;
@@ -13,14 +13,12 @@ public class PetStore implements Observable {
 		subscriberList = new ArrayList<>();
 	}
 
-	public String getName() {
+	public StoreName getName() {
 		return name;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
+public void setName(StoreName name) {
+	this.name = name;
+}
 	public String getAddress() {
 		return address;
 	}
